@@ -12,8 +12,8 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    connectionString : process.env.DATABASE_URL,
-    ssl: { rejectUnauthorized: false },
+    connectionString: process.env.DATABASE_URL,
+    ssl: {rejectUnauthorized: false},
     host : process.env.DATABASE_HOST,
     Port: 5432,
     user : process.env.DATABASE_USER,
@@ -21,7 +21,6 @@ const db = knex({
     database : process.env.DATABASE_DB
   }
 });
-
 
 const app = express();
 app.use(bodyParser.json());
